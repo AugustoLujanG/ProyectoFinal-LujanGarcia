@@ -1,0 +1,17 @@
+footer {
+    padding-top: 15px;
+    margin-top: 30px;
+}
+
+.footer-box {
+    @media only screen and (max-width: 768px) {
+        padding-bottom: 50px;
+        align-items: center;
+    }
+
+    .mapa {
+        margin-bottom: 5px;
+        width: 125px;
+        height: 125px;
+    }
+}

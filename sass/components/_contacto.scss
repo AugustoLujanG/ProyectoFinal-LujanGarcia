@@ -1,0 +1,42 @@
+@import '../base/variables';
+
+#contacto {
+    background: url(../images/contacto.jpg) center center / cover no-repeat;
+}
+
+#rocket {
+    margin-top: 100px;
+}
+
+#formulario {
+    padding-top: 20px;
+}
+
+.contact-form {
+    width: 70%;
+
+    .form-control {
+        border-radius: 1rem;
+    }
+
+    form {
+        padding: 9%;
+    }
+
+    h2 {
+        margin-bottom: 8%;
+        margin-top: -10%;
+        text-align: center;
+        color: $color-general;
+    }
+}
+
+.contact-image {
+    text-align: center;
+
+    img {
+        border-radius: 6rem;
+        width: 11%;
+        transform: rotate(29deg);
+    }
+}

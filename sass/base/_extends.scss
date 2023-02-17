@@ -1,0 +1,207 @@
+@import 'variables';
+@import 'mixins';
+
+%texto-h1 {
+    font-weight: bold;
+    color: $color-general;
+}
+
+%flex {
+    display: flex;
+    flex-direction: column;
+}
+
+%font {
+    color: $color-general;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+%gradiente {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.7411764706), rgba(0, 0, 0, 0.568627451), rgba(0, 0, 0, 0.4156862745), rgba(0, 0, 0, 0.368627451), rgba(0, 0, 0, 0.1764705882), rgba(0, 0, 0, 0.0470588235), rgba(80, 80, 80, 0));
+    z-index: -1;
+}
+
+%boton {
+    padding: 1.5;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+%underline {
+    right: 0;
+}
+
+%shadow-effect {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+}
+
+%shadow-effect-before {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+}
+
+.hvr-float-shadow {
+    &:hover {
+        @extend %shadow-effect;
+    }
+
+    &:focus {
+        @extend %shadow-effect;
+    }
+
+    &:active {
+        @extend %shadow-effect;
+    }
+
+    &:hover:before {
+        @extend %shadow-effect-before;
+    }
+
+    &:focus:before {
+        @extend %shadow-effect-before;
+    }
+
+    &:active:before {
+        @extend %shadow-effect-before;
+    }
+}
+
+.hvr-underline-from-left {
+    &:hover::before {
+        @extend %underline;
+    }
+
+    &:focus::before {
+        @extend %underline;
+    }
+
+    &:active::before {
+        @extend %underline;
+    }
+}
+
+.contact-form {
+    .btnContact {
+        @extend %boton;
+        @include botones (max-content, 2rem);
+        background: #dc3545;
+        color: $color-general;
+    }
+
+}
+
+.btnContactSubmit {
+    @extend %boton;
+    @include botones (50%, 1rem);
+    color: $color-general;
+    background-color: #0062cc;
+}
+
+.footer-box {
+    @extend %flex;
+
+    .map {
+        @extend %flex;
+        align-items: flex-end;
+
+        a {
+            @extend %flex;
+            font-size: 17px;
+            align-items: center;
+        }
+    }
+
+    a {
+        @extend %font;
+        text-decoration: none;
+        padding: 5px;
+        font-size: 25px;
+    }
+
+    p {
+        @extend %font;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#complejo {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}
+
+#futbol {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}
+
+#tenis {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}
+
+#ubicacion {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}
+
+#contacto {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}
+
+#reserva {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}
+
+#carro {
+    &::after {
+        @extend %gradiente;
+    }
+
+    h1 {
+        @extend %texto-h1;
+    }
+}

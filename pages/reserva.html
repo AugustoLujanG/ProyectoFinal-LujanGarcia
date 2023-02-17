@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description"
+		content="Somos un complejo deportivo con canchas de última generación y tecnología. Encontrarán canchas de fútbol con césped sintético y canchas de tenis de polvo de ladrillo con medidas reglamentarias, además de un amplio estacionamiento al aire libre y esacios verdes para disfrutar en familia.">
+
+	<meta name="keywords"
+		content="Fútbol, Tenis, Aire libre, Esparcimiento, Reservas, Sintético, Polvo de ladrillo, Canchas, Deporte, Entretenimiento">
+
+	<meta property="og:title" content="Sport Pro | Reserva | Divertite entrenando">
+	<meta property="og:description"
+		content="Somos un complejo deportivo con canchas de última generación y tecnología. Encontrarán canchas de fútbol con césped sintético y canchas de tenis de polvo de ladrillo con medidas reglamentarias, además de un amplio estacionamiento al aire libre y esacios verdes para disfrutar en familia.">
+	<meta property="og:image"
+		content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI7dzja2K_ll6jHBCYzRsXVovWKvYAigGpVg&usqp=CAU">
+	<meta property="og:url" content="https://augustolujang.github.io/Proyecto-Final/">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="es_ES">
+
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<!-- SweetAlert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Logos redes footer -->
+	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+	<title>Sport Pro | Reserva | Divertite entrenando</title>
+</head>
+
+<body class="bg-dark">
+
+	<!-- inicio Header -->
+	<header>
+		<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="../index.html">
+					<img src="../images/logo.png" id="logo" alt="logo">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav menu">
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="../index.html">Inicio</a>
+						</li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="futbol.html">Fútbol</a>
+						</li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="tenis.html">Tenis</a>
+						</li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link" href="ubicacion.html">Cómo
+								Llegar</a></li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link"
+								href="contacto.html">Contacto</a></li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link active"
+								href="reserva.html">Reserva Online</a></li>
+						<li class="nav-item hvr-underline-from-left"><a class="nav-link active" href="carrito.html"><img
+									src="../images/carrito logo.png" alt="carrito" style="width: 23px; height: 23px">
+								<p id="count-product">0</p>
+							</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Fin Header -->
+
+	<main>
+		<section id="reserva" class="jumbotron text-center" data-aos="zoom-in">
+			<br><br><br><br>
+			<h1 class="display-3">RESERVAR</h1>
+			<br><br><br><br>
+		</section>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md contact-form">
+					<div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+						<form action="">
+							<select class="form-control espaciado" placeholder="Cancha" id="tipo">
+								<option disabled selected>Cancha</option>
+								<option value="Fútbol 5">Fútbol 5</option>
+								<option value="Fútbol 8">Fútbol 8</option>
+								<option value="Tenis descubierta">Tenis descubierta</option>
+								<option value="Tenis techada">Tenis techada</option>
+								<option value="Paddle">Paddle</option>
+							</select>
+
+							<div class="form_error_cancha error"></div>
+
+							<input placeholder="dd/mm/aaaa" type="date" class="form-control espaciado" id="dia">
+							<div class="form_error_fecha error"></div>
+
+							<select class="form-control espaciado" id="hora">
+								<option disabled selected>Turno</option>
+								<option value="9">9 a 10</option>
+								<option value="10">10 a 11</option>
+								<option value="11">11 a 12</option>
+								<option value="12">12 a 13</option>
+								<option value="13">13 a 14</option>
+								<option value="14">14 a 15</option>
+								<option value="15">15 a 16</option>
+								<option value="16">16 a 17</option>
+								<option value="17">17 a 18</option>
+								<option value="18">18 a 19</option>
+								<option value="19">19 a 20</option>
+								<option value="20">20 a 21</option>
+								<option value="21">21 a 22</option>
+								<option value="22">22 a 23</option>
+								<option value="23">23 a 00</option>
+							</select>
+							<div class="form_error_hora error"></div>
+
+							<input type="submit" name="btnSubmit" class="btnContact espaciado" id="sumar"
+								value="Agregar al carrito" />
+
+						</form>
+					</div>
+				</div>
+
+				<div class="col-md fondo" id="fondos">
+					<div class="row">
+						<div class="col-md">
+							<div class="clima">
+								<div>
+									<h2>Fecha</h2>
+									<p id="fecha-api"></p>
+									<h2>Hora</h2>
+									<p id="hora-api"></p>
+								</div>
+
+								<div class="ciudad">
+									<h2>Ciudad</h2>
+									<p id="ciudad-api"></p>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="col-md">
+							<div class="clima">
+								<div>
+									<h2>Condición</h2>
+									<p id="informacion-api"></p>
+								</div>
+
+								<div>
+									<h2>Humedad</h2>
+									<p id="humedad-api"></p>
+								</div>
+
+								<div>
+									<h2>Velocidad del viento</h2>
+									<p id="viento-api"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md">
+							<div class="clima">
+								<div>
+									<h2>Temperatura</h2>
+									<p id="temperatura-api"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Inicio Footer -->
+	<footer class="bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-md">
+					<div class="footer-box">
+						<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i> Instagram</a>
+						<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i> Facebook</a>
+						<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i> Twitter</a>
+					</div>
+				</div>
+				<div class="col-md text-center">
+					<div class="footer-box">
+						<p>e-mail: email@email.com</p>
+						<p>Tel.: (011) 1234-5678 - Whatsapp: 11-1234-5678</p>
+						<p>Dirección - CABA - Argentina</p>
+						<p>Copyright © 2022 SportPro.com.ar</p>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="footer-box">
+						<div class="map">
+							<iframe class="mapa"
+								src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13144.912839909126!2d-58.4515826!3d-34.547776850000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665523522183!5m2!1ses-419!2sar"
+								width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<a
+								href="https://www.google.com/maps?ll=-34.547777,-58.451583&z=13&t=m&hl=es-419&gl=AR&mapclient=embed">Ver
+								mapa</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Fin Footer -->
+
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+	</script>
+
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
+	<script src="../models/Cancha.js"></script>
+	<script src="../models/Item.js"></script>
+	<script src="../clima.js"></script>
+	<script src="../contador.js"></script>
+	<script src="../app.js"></script>
+
+</body>
+
+</html>
